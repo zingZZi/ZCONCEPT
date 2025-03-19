@@ -1,0 +1,235 @@
+@use "variables" as v;
+
+.main-hader{
+    border-bottom:1px solid v.$light-gray;
+    nav{
+        max-width: 1920px;
+        margin:0 auto;
+        padding:16px 20px;
+    }
+
+    .hader-top{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        h1{
+
+        }
+        .top-link-icons{
+            display: flex;
+            a{
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .hader-bottom{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        >div{
+            display: flex;
+        }
+        .gnb-btn-wrap{
+            padding-right:22px ;
+            .gnb-btn{
+                width: 40px;
+                height: 40px;
+                border-radius: 7px;
+                border:1px solid #e2e2e2;
+                background-image: url('./../svg/hambuger.svg');
+                background-repeat: no-repeat;
+                background-size: 58%;
+                background-position: 50%;
+            }
+        }
+        .gnb-sub-nav{
+            display: flex;
+            ul{
+                display: flex;
+                align-items: center;
+                align-items: center;
+                gap:14px;
+                &:first-child{
+                    margin-right: 16px;;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 16px;
+                        background-color: #e2e2e2;
+                        font-size: 0;
+                    }
+                }
+                li{
+                    a{
+                        font-size: 17px;
+                        line-height: 130%;
+                    }
+                }
+            }
+        }
+        .gnb-box-wrap{
+            position: fixed;
+            z-index: 99;
+            top: 105px;
+            left: 0;
+            width: 100%;
+            border-bottom:1px solid #e2e2e2;
+            background-color: v.$main-white;
+            .gnb-box{
+                max-width: 1920px;
+                display: flex;
+                .gnb-lists{
+                    display: flex;
+                    width: 1200px;
+                }
+            }
+            .depth1{
+                width: 170px;
+                ul{
+                    li{
+                        padding:14px 0;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:first-child{
+                            padding-top:0;
+                        }
+                        &.active{
+                            &::after{
+                                content:"";
+                                width: 14px;
+                                height: 16px;
+                                background:url('./../svg/chevron_right.svg') no-repeat 50%;
+                                background-size:contain;
+                            }
+                        }
+                    }
+                }
+            }
+            .depth2{
+	            flex-grow: 1;
+                >ul{
+                    width: 100%;
+                    &::after{
+                        content: "";
+                        clear:both;
+                    }
+                    >li{
+                        width: 20%;
+                        float: left;
+                    }
+                }
+            }
+            .rignt-lists{
+                width: calc(100% - 1200px);;
+                background-color: #f9f9f9;
+                display: flex;
+                padding:25px 50px;
+                font-size: 14px;
+                >div{
+                    width: 168px;
+                    column-gap: 8px;
+                    h3{
+                        font-weight:500;
+                        margin-bottom:16px;
+                    }
+                    li{
+                        font-weight: 400;
+                        color:rgb(123,123,123);
+                        margin-bottom:15px;
+                        &:hover{
+                            color:v.$main-black
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.new-gnb-inner{
+    position: relative;
+    width: 100%;
+    .gnb-depth1-box{
+        >li{
+            display: flex;
+            a{
+                font-size: 14px;
+            }
+            &:first-child{
+                padding-top:0;;
+            }
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    .gnb_depth1{
+                        top:26px + (47px*(($i)-1));
+                    }
+                }
+            }
+        }
+        .gnb_depth1{
+            width: 170px;
+            font-size:17px;
+            display: block;
+            position: absolute;
+            padding-left:20px;
+            text-align: left;
+        }
+        .gnb-depth2-box{
+            width: 100%;
+            padding-left:195px;
+            padding-bottom:25px;
+            display: none;
+            background-color: v.$main-white;
+            >li{
+                float:left;
+                width: 20%;
+                padding-top:25px;
+            }
+            .gnb_depth2{
+                font-weight: 500;
+            }
+            .gnb-depth3-lists{
+                margin-top:16px;
+                li{
+                    margin-bottom:4px;
+                    &:last-child{
+                        margin-bottom:0;
+                    }
+                    .gnb_depth3{
+                        display: block;
+                        font-weight: 400;
+                        color:rgb(123,123,123);
+                        margin-bottom:15px;
+                        &:hover{
+                            color:v.$main-black
+                        }
+                    }
+                }
+            }
+        }
+
+        //활성화시 css
+        >li.active{
+            .gnb_depth1{
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    width: 15px;
+                    height: 15px;
+                    background-image: url('./../svg/chevron_right.svg');
+
+                }
+            }
+            .gnb-depth2-box{
+                display: block;
+            }
+        }
+    }
+}

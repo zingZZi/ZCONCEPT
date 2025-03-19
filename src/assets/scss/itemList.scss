@@ -1,0 +1,106 @@
+@use "variables" as v;
+.item-list{
+    margin-top:20px;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap:60px 18px;
+        li{
+            width:206px;
+            .img-wrap{
+                margin-bottom:8px;
+                img{
+                    max-width: 100%;
+                }
+            }
+            .item-info{
+                display: flex;
+                flex-direction: column;
+                font-weight: 400;
+                position: relative;
+                .brand-name{
+                    font-size: 15px;
+                    line-height: 130%;
+                    font-weight: 600;
+                    padding-right: 20px;
+                }
+
+                .item-name{
+                    font-size: 14px;
+                    line-height: 130%;
+                    color: v.$font-gray;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    margin-top:4px;
+                }
+                .price-info{
+                    margin-top:8px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 17px;
+                    font-weight: 600;
+                    line-height: 130%;
+                    .price{
+                        text-decoration: line-through;
+                        color:v.$font-light-gray;
+                        font-size: 12px;
+                        width: 100%;
+                    }
+                    .rate{
+                        color:rgb(255, 70, 0);
+                        font-weight: 600;
+                        padding-right:10px;
+                    }
+                    .final-price{
+                        font-weight: 600;
+                    }
+                }
+                .cs-info{
+                    display: flex;
+                    font-size: 11px;
+                    color:v.$font-dark-gray;
+                    margin:10px 0;
+                    gap:0 10px;
+                    >div{
+                        display: flex;
+                        gap:0 3px;
+                    }
+                    .icon{
+                        width: 11px;
+                        height: 11px;
+                        fill:v.$font-dark-gray;
+                    }
+                }
+                .info-tags{
+                    display: flex;
+                    gap:0 5px;
+                    span{
+                        color:rgb(119, 119, 119);
+                        background-color: v.$light-gray;
+                        font-size: 12px;
+                        display: block;
+                        padding:0 5px;
+                        height: 19px;
+                        line-height: 19px;
+                    }
+                }
+                
+                .like-btn{
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top:0;
+                    right:0;
+                    .icon{
+                        display: block;
+                        width:100%;
+                        height:100%
+                    };
+                }
+            }
+        }
+    }
+}

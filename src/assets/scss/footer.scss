@@ -1,0 +1,86 @@
+@use "variables" as v;
+
+footer{
+    margin-top:120px;
+    padding:40px 20px;
+    background-color: #f9f9f9;
+    border-top:1px solid v.$light-gray;
+    .footer-container{
+        max-width: 1370px;
+        display: flex;
+    }
+    .footer-left-info{
+        min-width: 595px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            column-gap: 16px;
+            margin-bottom:12px;
+            &:last-child{
+                margin-bottom:0;
+            }
+            li{
+                button{
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 120%;
+                }
+            }
+        }
+        .bottom-info{
+            display: flex;
+            flex-direction: column;
+            .cs-link{
+                h3{
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 130%;
+                    margin-bottom:3px;
+                }
+                p{
+                    strong{
+                        font-size: 28px;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
+                    span{
+                        padding-left: 4px;
+                        font-size: 16px;
+                        color: rgb(153, 153, 153);
+                        font-weight: 500;
+                    }
+                }
+            }
+            .instargram{
+                margin-top: 16px;
+                width: 20px;
+                height: 20px;
+                background-image: url('./../svg/instargram.svg');
+            }
+        }
+    }
+    .footer-right-info{
+        >div{
+            margin-top:24px;
+            &:first-child{
+                margin-top:0;
+            }
+            h3{
+                font-size: 16px;
+                margin-bottom:7px;
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px 16px;
+                li{
+                    color: rgb(119, 119, 119);
+                    font-size: 13px;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+}

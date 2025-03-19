@@ -1,0 +1,22 @@
+.icon{
+    font-size:0;
+    text-indent: -999999px;;
+    background-size:contain;
+    display: block;
+    &.hart{
+        background-image: url('./../svg/hart.svg');
+    }
+    &.cart{
+        background-image: url('./../svg/cart.svg');
+    }
+    &.star{
+        background-image: url('./../svg/star.svg');
+    }
+    &.fill-heart{
+        background-image: url('./../svg/fillHeart.svg');
+    }
+    &.heart_line{
+        background-image: url('./../svg/heart_line.svg');
+
+    }
+}

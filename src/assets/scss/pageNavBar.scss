@@ -1,0 +1,23 @@
+@use "variables" as v;
+
+.page-nav-bar{
+    margin:20px 0 10px;
+    ul{
+        display: flex;
+        gap:5px;
+        li{
+            line-height: 16px;
+            font-size: 13px;
+            color: v.$font-light-gray;
+            &::after{
+                content: ">";
+                margin-left:5px;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

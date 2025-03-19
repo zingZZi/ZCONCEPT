@@ -1,0 +1,22 @@
+@use "variables" as v;
+.category-depth{
+    ul{
+        border-top:2px solid v.$main-black;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom:1px solid v.$light-gray;
+        li{
+            width: 13%;
+            text-align: center;
+            height: 62px;
+            display: flex;
+            button{
+                width: 100%;
+                color:v.$font-dark-gray;
+                &.on{
+                    color:v.$main-black;
+                }
+            }
+        }
+    }
+}
