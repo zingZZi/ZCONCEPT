@@ -2,7 +2,354 @@
     {
         "data": {
             "size": 6,
-            "content":[]
+            "content":[
+                {
+                    "id": 101,
+                    "displayId": 16,
+                    "areaTitle": "MAIN BANNER",
+                    "areaTitle2": null,
+                    "areaSubTitle": null,
+                    "areaType": "BN",
+                    "areaSubType": "BN006",
+                    "targetPageType": "NONE",
+                    "targetPageParameter": null,
+                    "newTargetUrl": null,
+                    "displayAreaContentsList": [
+                        {
+                            "id": 68956,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "CHICOR SALE",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "럭셔리 뷰티 세일 & ~20% 쿠폰",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250318181910208_9644.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118728",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118728",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68952,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "V&A BEAUTY",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "단독 클리어런스 ~79%세일",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250318152611068_5569.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118795",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118795",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68405,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "월간뷰티 3월호",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "1+1, 기프트 증정 ~75%할인 +18%쿠폰",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250305153603922_1339.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118471",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118471",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68876,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "폴라초이스 72시간 세일",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "단, 3일!  ~25%+ 20% 쿠폰+사은품 ",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250317133919422_6306.JPG",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118754",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118754",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68504,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "SPRING FESTA",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "뷰티 베스트 브랜드 ~70%세일 &~30%쿠폰",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250314182615465_3941.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118556",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118556",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68832,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "KISS ME",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "리치쥬얼 NEW컬러 선론칭~79%세일&증정",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250317092110866_4696.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118620",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118620",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68833,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "VODANA",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "컴팩트 물결 고데기NEW컬러 론칭~23%&증정",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250317092559303_3999.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118764",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118764",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68828,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "3CE",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "마이 링 라이너 론칭 ~ 25%세일&사은품증정",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250317091145477_3171.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118622",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118622",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68829,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "CHAHONG",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "브랜드 위크 ~30%세일&증",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250317091437803_1685.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118621",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118621",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68761,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "Pleuvoir",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "더 화이트 콜렉션 론칭 ~10%세일 & 사은품",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250313181027155_2102.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118713",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118713",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        },
+                        {
+                            "id": 68727,
+                            "displayAreaId": 101,
+                            "contentsTitle1": "SKINFOOD",
+                            "contentsTitle2": null,
+                            "contentsSubTitle1": "피부 진정을 위한 스킨푸드 ~60%+20%쿠폰",
+                            "imageType": "image",
+                            "imageFilePath": "https://wimage.wconcept.co.kr/msa/display/20250313095235050_2003.jpg",
+                            "targetPageType": "OUTLINK",
+                            "targetPageParameter": "118698",
+                            "newTargetUrl": null,
+                            "productCd": null,
+                            "issueCd": null,
+                            "mediumName": null,
+                            "categoryDepthName1": null,
+                            "categoryDepthName2": null,
+                            "categoryDepthName3": null,
+                            "brandCd": null,
+                            "product": null,
+                            "issue": null,
+                            "webViewUrl": "https://event.wconcept.co.kr/event/118698",
+                            "displayAreaContentsItemList": null,
+                            "lookbookList": null,
+                            "contentsOptions": null,
+                            "ga4ClickEvent": {
+                                "eventType": "issue"
+                            }
+                        }
+                    ],
+                    "displayAreaItemList": [],
+                    "displayRankingProductMediumRes": null,
+                    "brandForYouList": [],
+                    "areaProperty": {
+                        "amplitude": {
+                            "event_name": [
+                                "click_category_mainbanner"
+                            ],
+                            "property": [
+                                {
+                                    "click_module": "category_mainbanner"
+                                }
+                            ]
+                        },
+                        "ga4": {
+                            "ep_click_area": {
+                                "click_banner": "category2_main_banner"
+                            }
+                        }
+                    },
+                    "webViewUrl": "",
+                    "ga4ClickEvent": {
+                        "eventType": "etc"
+                    }
+                }
+            ]
         }
     }
 ]
