@@ -107,17 +107,12 @@
     .category-trand{
         .tab-btn-wrap{
             margin-bottom:40px;
-            ul{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap:0 28px;
-                li{
-                    font-size: 16px;
-                    color:v.$font-dark-gray;
-                    &.on{
-                        color:v.$main-black;
-                    }
+            gap:0 28px;
+            button{
+                font-size: 16px;
+                color:v.$font-dark-gray;
+                &.on{
+                    color:v.$main-black;
                 }
             }
 

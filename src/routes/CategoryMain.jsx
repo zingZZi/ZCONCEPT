@@ -6,16 +6,27 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Tab from "../components/Tab";
+import TrandBanner from "./categoryMain/trandBanner";
 
 function CategoryMain(){
     let {pageid} = useParams();
     const [itemData,setItemData] = useState([]);
-    const [test,setTest] = useState([]);
+    let [mainBanner,setMainBanner] = useState([])
+    let [subBanner,setSubBanner] = useState([]);
+    let [trandItems,setTrandItems] = useState([]);
+
     function dataCheck(e){
         setItemData(e);
-        setTest(e[0].displayAreaContentsList)
+        let subBannerIndex = e.findIndex((item) => item.areaTitle === "SUB BANNER");
+        if(subBannerIndex === 2){
+            setSubBanner(e[2].displayAreaContentsList);
+        }else{
+            setSubBanner([]);
+        }
+        setMainBanner(e[0].displayAreaContentsList)
+        setTrandItems(e[3].displayAreaContentsList)
     }
-    console.log(test)
     useEffect(()=>{
         async function getData() {
             try{
@@ -30,22 +41,12 @@ function CategoryMain(){
             }
         }
         getData();
-
     },[pageid]);
-
 
 
     return(
         <>
-            {
-                test.map((e,i)=>{
-                    return(
-                        <div key={i}>
-                            {i}
-                        </div>
-                    )
-                })
-            }
+            
             <div className="main-container">
                 <nav className="page-nav-bar">
                     <ul>
@@ -64,34 +65,19 @@ function CategoryMain(){
                 modules={[Navigation]}
                 className='category-banner'
                 >
-                <SwiperSlide>
-                    <img src="https://wimage.wconcept.co.kr/msa/display/20250318152611068_5569.jpg" alt="" />
-                    <div>
-                        <span className='title'>V&A BEAUTY</span>
-                        <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="https://wimage.wconcept.co.kr/msa/display/20250313095235050_2003.jpg" alt="" />
-                    <div>
-                        <span className='title'>V&A BEAUTY</span>
-                        <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="https://wimage.wconcept.co.kr/msa/display/20250305153603922_1339.jpg" alt="" />
-                    <div>
-                        <span className='title'>V&A BEAUTY</span>
-                        <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="https://wimage.wconcept.co.kr/msa/display/20250317091437803_1685.jpg" alt="" />
-                    <div>
-                        <span className='title'>V&A BEAUTY</span>
-                        <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                    </div>
-                </SwiperSlide>
+                {
+                    mainBanner.map((e,i)=>{
+                        return(
+                            <SwiperSlide key={i}>
+                                <img src={`${e.imageFilePath}`} alt="" />
+                                <div>
+                                    <span className='title'>{e.contentsTitle1}</span>
+                                    <span className='sub-title'>{e.contentsSubTitle1}</span>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
             <div className="categorty-main main-container">
                 <nav className="category-depth">
@@ -102,62 +88,31 @@ function CategoryMain(){
                         <li><button>티셔츠</button></li>
                     </ul>
                 </nav>
-
-                <div className="sub-banner">
-                    <div className="banner-wrap">
-                        <div className="img-wrap">
-                            <img src="https://wimage.wconcept.co.kr/msa/display/20241216103753888_9184.jpg?RS=310" alt="" />
-                        </div>
-                        <div className="text-info">
-                            <span className="title">SSG BEAUTY</span>
-                            <span className="sub-title">SSG 뷰티 라이프 스타일 전문관</span>
-                        </div>
+                {
+                   subBanner.length > 0
+                   ? 
+                    <div className="sub-banner">
+                        {
+                            subBanner.map((e,i)=>{
+                                return(
+                                    <div className="banner-wrap" key={i}>
+                                        <div className="img-wrap">
+                                            <img src={`${e.imageFilePath}`} alt="" />
+                                        </div>
+                                        <div className="text-info">
+                                            <span className="title">{e.contentsTitle1}</span>
+                                            <span className="sub-title">{e.contentsSubTitle1}</span>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-                </div>
-
+                   : null
+                }
                 <div className="category-trand">
                     <h3>TRENDING NOW</h3>
-                    <nav className="tab-btn-wrap">
-                        <ul>
-                            <li className="on">럭셔리뷰티</li>
-                            <li>스킨케어루틴</li>
-                            <li>데일리 메이크업</li>
-                        </ul>
-                    </nav>
-                    <div className="category-items-banner">
-                        <Swiper
-                            slidesPerView={5}
-                            spaceBetween={18}
-                            loop={true}
-                            navigation={true}
-                            modules={[Navigation]}
-                            className='items-banner'
-                        >
-                            <SwiperSlide>
-                                <div className="img-wrap">
-                                    <img src="https://product-image.wconcept.co.kr/productimg/image/img9/11/306683211_LI40832.jpg?RS=310" alt="" />
-                                </div>
-                                <div className="item-info">
-                                    <b className="brand">Lancome</b>
-                                    <span>[5천원상품권]UV 엑스퍼트 50ml 듀오(파우치 증정)</span>
-                                    <div>
-                                        <strong>126,400</strong>
-                                        <em>20%</em>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <div className="img-wrap">
-                                    <img src="https://product-image.wconcept.co.kr/productimg/image/img9/11/306683211_LI40832.jpg?RS=310" alt="" />
-                                </div>
-                                <div className="item-info">
-                                    <span className='title'>V&A BEAUTY</span>
-                                    <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
-                    </div>
+                    <TrandBanner trandItems={trandItems}/>
                 </div>
 
                 <div className="category-md">
