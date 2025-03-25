@@ -8,6 +8,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Tab from "../components/Tab";
 import TrandBanner from "./categoryMain/trandBanner";
+import MdPickBannaer from "./categoryMain/MdPickBanner";
+import BpBanner from "./categoryMain/BpBanner";
 
 function CategoryMain(){
     let {pageid} = useParams();
@@ -15,10 +17,20 @@ function CategoryMain(){
     let [mainBanner,setMainBanner] = useState([])
     let [subBanner,setSubBanner] = useState([]);
     let [trandItems,setTrandItems] = useState([]);
+    let [mdItems,setmdItems] = useState([]);
+    let [bpItems,setbpItems] = useState([]);
+    let [bpTitle,setbpTitle] = useState('');
+    let [brandsLists,setbrandsLists] = useState([]);
 
     function dataCheck(e){
         setItemData(e);
         let subBannerIndex = e.findIndex((item) => item.areaTitle === "SUB BANNER");
+        let mdIndex = e.findIndex((item) => item.areaSubType === "PD005");
+        let bpIndex = e.findIndex((item) => item.areaType === "BP");
+        let brandsIndex = e.findIndex((item) => item.areaSubType === "BN005");
+
+        
+        
         if(subBannerIndex === 2){
             setSubBanner(e[2].displayAreaContentsList);
         }else{
@@ -26,6 +38,10 @@ function CategoryMain(){
         }
         setMainBanner(e[0].displayAreaContentsList)
         setTrandItems(e[3].displayAreaContentsList)
+        setmdItems(e[mdIndex]?.displayAreaItemList || []);
+        setbpItems(e[bpIndex]?.displayAreaContentsList || []);
+        setbpTitle(e[bpIndex]?.areaTitle ||'추천 아이템')
+        setbrandsLists(e[brandsIndex]?.displayAreaContentsList || []);
     }
     useEffect(()=>{
         async function getData() {
@@ -37,7 +53,7 @@ function CategoryMain(){
                 dataCheck(copy);
             }
             catch(e){
-                console.log('실패')
+                console.log(e)
             }
         }
         getData();
@@ -46,7 +62,6 @@ function CategoryMain(){
 
     return(
         <>
-            
             <div className="main-container">
                 <nav className="page-nav-bar">
                     <ul>
@@ -115,88 +130,48 @@ function CategoryMain(){
                     <TrandBanner trandItems={trandItems}/>
                 </div>
 
-                <div className="category-md">
-                    <h3>MD'S PICK</h3>
-                    <div className="category-items-banner">
-                        <Swiper
-                            slidesPerView={4}
-                            spaceBetween={18}
-                            loop={true}
-                            navigation={true}
-                            modules={[Navigation]}
-                            className='items-banner'
-                        >
-                            <SwiperSlide>
-                                <div className="img-wrap">
-                                    <img src="https://product-image.wconcept.co.kr/productimg/image/img9/11/306683211_LI40832.jpg?RS=310" alt="" />
-                                </div>
-                                <div className="item-info">
-                                    <b className="brand">Lancome</b>
-                                    <span>[5천원상품권]UV 엑스퍼트 50ml 듀오(파우치 증정)</span>
-                                    <div>
-                                        <strong>126,400</strong>
-                                        <em>20%</em>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+                {/* MD PICK */}
 
-                            <SwiperSlide>
-                                <div className="img-wrap">
-                                    <img src="https://product-image.wconcept.co.kr/productimg/image/img9/11/306683211_LI40832.jpg?RS=310" alt="" />
-                                </div>
-                                <div className="item-info">
-                                    <span className='title'>V&A BEAUTY</span>
-                                    <span className='sub-title'>단독 클리어런스 ~79%세일</span>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
+                {
+                    mdItems.length > 0
+                    ?
+                    <div className="category-md">
+                        <h3>MD'S PICK</h3>
+                        <MdPickBannaer mdItems={mdItems}/>
                     </div>
-                </div>
-
+                    :null
+                }
+                
+                
                 <div className="category-pick">
-                    <h3>BEAUTY PICK</h3>
-                    <div className="itmes-lists">
-                        <div>
-                            <div className="brand-top">
-                                <div className="img-wrap">
-                                    <img src="https://wimage.wconcept.co.kr/msa/display/20250317115857248_4690.jpg?RS=600" alt="" />
-                                </div>
-                                <div className="brand-text">
-                                    <strong>narka</strong>
-                                    <p>완전히 새로운 헤어 케어의 시작</p>
-                                </div>
-                            </div>
+                    <h3>{bpTitle}</h3>
+                    <BpBanner bpItems={bpItems}/>
+                </div>
 
-                            <div className="pick-item-lists">
-                                <div>
-                                    <div className="img-wrap">
-                                        <img src="https://wimage.wconcept.co.kr/msa/display/20250317115857248_4690.jpg?RS=600" alt="" />
-                                    </div>
-                                    <div className="item-info">
-                                        <b className="brand">narka</b>
-                                        <span>[5천원상품권]UV 엑스퍼트 50ml 듀오(파우치 증정)</span>
-                                        <div className="price-info">
-                                            <strong>126,400</strong>
-                                            <em className="discont-font">20%</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                {
+                    brandsLists.length > 0
+                    ? 
+                    <div className="category-brand">
+                        <h3>BRANDS</h3>
+                        <ul className="brand-lists">
+                            {
+                                brandsLists.map((e,i)=>
+                                    i<5 && (
+                                        <li>
+                                            <div className="img-wrap">
+                                                <img src={e.imageFilePath} alt="" />
+                                            </div>
+                                            <strong>{e.contentsTitle1}</strong>
+                                        </li>
+                                    )
+                                )
+                            }
+                            
+                        </ul>
                     </div>
-                </div>
-
-                <div className="category-brand">
-                    <h3>BRANDS</h3>
-                    <ul className="brand-lists">
-                        <li>
-                            <div className="img-wrap">
-                                <img src="https://wimage.wconcept.co.kr/msa/display/20250317121326473_4543.jpg?RS=600" alt="" />
-                            </div>
-                            <strong>AMUSE</strong>
-                        </li>
-                    </ul>
-                </div>
+                    : null
+                }
+                
             </div>
         </>
         

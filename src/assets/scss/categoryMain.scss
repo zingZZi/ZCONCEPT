@@ -115,10 +115,30 @@
                     color:v.$main-black;
                 }
             }
-
+        }
+        .img-wrap{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.04);
+            }
         }
     }
 
+    .category-md{
+        .category-items-banner{
+            
+            .item-info{
+                >span{
+                    min-height: 37px;
+                }
+                //margin-top:16px;
+            }
+        }
+    }
 
     .category-pick{
         .itmes-lists{
@@ -271,6 +291,7 @@
             }
         }
         .item-info{
+            padding-top:16px;
             >b{
                 display: block;
                 font-size: 14px;
