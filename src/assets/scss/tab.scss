@@ -1,10 +1,16 @@
+@use "variables" as v;
 .tab{
     .tab-btn-wrap{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .tab-content{
-
+        gap: 0 28px;
+        button{
+            font-size: 16px;
+            color:v.$font-dark-gray;
+            &.on{
+                color:v.$main-black;
+            }
+        }
     }
 }

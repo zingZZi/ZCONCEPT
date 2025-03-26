@@ -144,8 +144,9 @@
         .itmes-lists{
             display: grid;
             gap:0 10px;
-            grid-template-columns: repeat(3, 1fr);
-
+            //grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+	        grid-template-columns: repeat(auto-fill, minmax(33%, auto));
             .brand-top{
                 position: relative;
                 width: 430px;
@@ -277,6 +278,67 @@
                     font-size: 18px;
                     line-height: 24px;
                 }
+            }
+        }
+    }
+
+    .best-items{
+        .best-items-wrap{
+            position: relative;
+            .best-itmes-lists{
+                margin-top:40px;
+                display: grid;
+                grid-template-columns: 428px 1fr 1fr 1fr 1fr;
+                gap:0 18px;
+                .best-item-list{
+                    &:first-child{
+	                    grid-row: 1 / span 2;
+                    }
+                    .img-wrap{
+                        position: relative;
+                        img{
+                            width: 100%;
+                        }
+                        .lank-num{
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            width: 40px;
+                            height: 40px;
+                            font-size: 24px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: v.$main-black;
+                            color:v.$main-white;
+                        }
+                    }
+                    .item-info{
+                        padding:16px 10px 0px 0;
+                        .brand{
+                            font-size: 14px;
+                            line-height: 16px;
+                            height: 16px;
+                            display: block;
+                        }
+                        >span{
+                            display: block;
+                            max-height: 40px;
+                            font-size: 14px;
+                            line-height: 20px;
+                            height: 40px;
+                            margin-top: 6px;
+                            color:rgb(123, 123, 123);
+                        }
+                        .price-info{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+            .lank-tab{
+                position: absolute;
             }
         }
     }

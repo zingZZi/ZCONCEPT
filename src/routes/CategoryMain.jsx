@@ -10,6 +10,7 @@ import Tab from "../components/Tab";
 import TrandBanner from "./categoryMain/trandBanner";
 import MdPickBannaer from "./categoryMain/MdPickBanner";
 import BpBanner from "./categoryMain/BpBanner";
+import BestItems from "./categoryMain/BestItems";
 
 function CategoryMain(){
     let {pageid} = useParams();
@@ -21,6 +22,7 @@ function CategoryMain(){
     let [bpItems,setbpItems] = useState([]);
     let [bpTitle,setbpTitle] = useState('');
     let [brandsLists,setbrandsLists] = useState([]);
+    let [bestItems,setBestItems] = useState([]);
 
     function dataCheck(e){
         setItemData(e);
@@ -28,6 +30,7 @@ function CategoryMain(){
         let mdIndex = e.findIndex((item) => item.areaSubType === "PD005");
         let bpIndex = e.findIndex((item) => item.areaType === "BP");
         let brandsIndex = e.findIndex((item) => item.areaSubType === "BN005");
+        let bestIndex = e.findIndex((item) => item.areaSubType === "TP003");
 
         
         
@@ -42,6 +45,7 @@ function CategoryMain(){
         setbpItems(e[bpIndex]?.displayAreaContentsList || []);
         setbpTitle(e[bpIndex]?.areaTitle ||'추천 아이템')
         setbrandsLists(e[brandsIndex]?.displayAreaContentsList || []);
+        setBestItems(e[bestIndex]?.displayRankingProductMediumRes.categoryList || []);
     }
     useEffect(()=>{
         async function getData() {
@@ -172,6 +176,11 @@ function CategoryMain(){
                     : null
                 }
                 
+
+                <div className="best-items">
+                    <h3>BEST ITEM</h3>  
+                    <BestItems bestItems={bestItems}/>
+                </div>
             </div>
         </>
         

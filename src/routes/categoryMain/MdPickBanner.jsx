@@ -13,7 +13,6 @@ function MdPickBannaer(props){
             setitem(mdLists)
         }
         list();
-        console.log(item)
     },[mdLists])
 
     return(
